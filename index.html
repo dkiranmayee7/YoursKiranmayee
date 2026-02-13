@@ -44,10 +44,14 @@
 
 </div>
 <script>
-  setTimeout(() => {
-    window.location.href = "love.html";
-  }, 1000); // 1 second delay
+  if (!sessionStorage.getItem("visited")) {
+    sessionStorage.setItem("visited", "true");
+    setTimeout(() => {
+      window.location.href = "love.html";
+    }, 1000); // 1 second delay
+  }
 </script>
+
 
 
 
