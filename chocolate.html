@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>🍫 Chocolate Day</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #614385, #516395);
+    text-align: center;
+    padding: 60px 20px;
+    color: white;
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 48px;
+}
+
+.choco-box {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    gap: 20px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.chocolate {
+    width: 80px;
+    height: 80px;
+    background: #4e342e;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.4);
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.chocolate:hover {
+    transform: scale(1.2);
+}
+
+#message {
+    margin-top: 40px;
+    font-size: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a {
+    display: inline-block;
+    margin-top: 50px;
+    padding: 15px 35px;
+    background: white;
+    color: #614385;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+}
+</style>
+
+</head>
+<body>
+
+<h1>🍫 Virtual Chocolate Box 💖</h1>
+
+<p>Click a chocolate to unwrap a sweet message 😌</p>
+
+<div class="choco-box">
+    <div class="chocolate" onclick="showMessage(1)">🍫</div>
+    <div class="chocolate" onclick="showMessage(2)">🍫</div>
+    <div class="chocolate" onclick="showMessage(3)">🍫</div>
+    <div class="chocolate" onclick="showMessage(4)">🍫</div>
+    <div class="chocolate" onclick="showMessage(5)">🍫</div>
+    <div class="chocolate" onclick="showMessage(6)">🍫</div>
+</div>
+
+<div id="message"></div>
+
+<a href="index.html">Back to Love Journey 💕</a>
+
+<script>
+function showMessage(num) {
+    let messages = {
+        1: "You make my life sweeter every single day. 💕",
+        2: "One chocolate for every time you made me smile. 😊",
+        3: "This one melts… just like my heart for you. 😌",
+        4: "Extra sweet — just like you. 🍫✨",
+        5: "Even chocolates are jealous of how sweet you are. 😏",
+        6: "No matter how sweet chocolate is… you're sweeter. 💖.. Adjust with the virtual chocolate..real dhi istha le nuv teeskuntava???"
+    };
+
+    document.getElementById("message").innerHTML = messages[num];
+}
+</script>
+
+</body>
+</html>
